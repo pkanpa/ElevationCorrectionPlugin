@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/png" href="elevcorr.png">
+</head>
+<html>
+<title>Elevation Correction Plugin</title>
+
+<h2>Elevation Correction Plugin for SportTracks</h3>
+
+<h3>Change log</h3>
+
+<h4>Version 1.9 (November 30, 2017):</h4>
+<ul>
+<li>Adapted to SRTM download site requiring HTTPS and TLS 1.2.</li>
+</ul>
+<h4>Version 1.8 (March 18, 2014):</h4>
+<ul>
+<li>Updated to reflect URL changes and data updates at Viewfinder Panoramas.</li>
+<li>Fixed: Elevation values of -1000m appeared when restoring original elevation data with missing elevation values.</li>
+<li>Fixed: Exception "System.InvalidOperation: Collection was modified".</li>
+<li>Fixed: Exception "BackgroundWorker doesn't support cancellation" when importing data or opening new logbook before plugin has finished scanning logbook for activities requiring SRTM download.</li>
+<li>Fixed: Exception "longitude or latitude exceeded limits" for DEMs in projected coordinates and GPS points outside the region of validity for the projection.</li>
+<li>Some additional minor updates and fixes.</li>
+</ul>
+<h4>Version 1.7 (October 25, 2010):</h4>
+<ul>
+<li>Fixed: Missing elevations in GPS track data were not properly handled when saving original elevation data.</li>
+<li>Activities with invalid positions in GPS track data are now ignored rather than triggering an error.</li>
+<li>Added elevation route control pointer mode.</li>
+<li>Added elevation correction activity detail page.</li>
+<li>Some updates to settings page (checkbox for activity detail page, coverage info for SRTM, "refresh" action renamed to "remove"/"rescan").</li>
+</ul>
+<h4>Version 1.6 (July 19, 2010):</h4>
+<ul>
+<li>Migrated from SportTracks 2 to SportTracks 3.</li>
+<li>Improved handling of partially covered SRTM tiles (mainly affecting Canada close to US border and the region around 60°&#160;N in general).</li>
+<li>Added workaround for file name inconsistencies on the official SRTM download server (mainly affecting Canada north of 60°&#160;N).</li>
+<li>Fixed a few minor typos.</li>
+</ul>
+<h4>Version 1.5 (August 30, 2009):</h4>
+<ul>
+<li>Updated to use SRTM version v2.1; the download URLs of the previous version v2.0 were no longer valid after v2.1 was released.</li>
+<li>Updated to use the latest updates of Viewfinder Panoramas.</li>
+<li>Added Refresh button to DEM list on plugin settings page.</li>
+</ul>
+<h4>Version 1.4 (July 2, 2009):</h4>
+<ul>
+<li>Plugin repackaged in a SportTracks 2 Plugin Install Package (.st2plugin).</li>
+<li>Switched to new SRTM download location.</li>
+<li>Modified GDAL handling in order to work with upcoming GDAL plugin releases.</li>
+<li>Text buttons for navigation etc in list of installed DEMs replaced by icons.</li>
+</ul>
+
+<h4>Version 1.3.1 (May 25, 2008):</h4>
+<ul>
+<li>Fixed incompatibility due to API change in ST 2.0.3062.</li>
+<li>Updated SharpZipLib to version 0.85.4.</li>
+</ul>
+
+<h4>Version 1.3 (March 25, 2008):</h4>
+<ul>
+<li>New option to specify sources that should be excluded from automatic correction at import.</li>
+<li>Works with (and requires) GDAL plugin v1.1 and higher.</li>
+<li>Updated to use the latest updates of Viewfinder Panoramas.</li>
+<li>Fixed: Plugin did not work first time it was run.</li>
+<li>Fixed: Runtime error when inspecting properties of a GDAL DEM that could not be opened.</li>
+<li>Fixed: GDAL lack of thread safety was not properly handled.</li>
+</ul>
+
+<h4>Version 1.2 (November 14, 2007):</h4>
+<ul>
+<li>DEM folders introduced.</li>
+<li>Multiselect enabled in file dialog for adding DEMs.</li>
+<li>Custom DEMs taken into account in selection of SRTM tiles to download when "Download elevation data for all activities" is checked.</li>
+<li>Fixed: Reference to osr_csharp.dll caused an exception for some users without GDAL installed.</li>
+</ul>
+
+<h4>Version 1.1 (October 15, 2007):</h4>
+<ul>
+<li>Custom digital elevation models now supported using GDAL.</li>
+<li>Priority between available digital elevation models can now be changed.</li>
+<li>Routes can now be corrected.</li>
+<li>A progress bar is displayed when many routes/activities are processed.</li>
+<li>SportTracks is no longer unresponsive while the plugin is processing data.</li>
+<li>Fixed: Did not work for regions covered by Islands subdirectory at the NASA FTP site (New Zealand + other islands).</li>
+</ul>
+
+<h4>Version 1.0 (September 14, 2007)</h4>
+<ul>
+<li>First public release.</li>
+</ul>
